@@ -66,27 +66,12 @@ class PolyTreeNode
   end
 
   def bfs(target_value)
-    #return self if self.value == target_value 
     arr = [self]
     until arr.empty?
-      # debugger
       check = arr.shift 
       return check if check.value == target_value
       arr.concat(check.children)
-      # check.children.each { |child| arr << child }
     end
     nil
   end
 end
-
-
-#                   A
-#                 /   \ 
-#                /     \
-#               B       C
-#              /\       /\
-#             /  \     /  \
-#            D    E   F    G
-#           /     /\       /\
-#          /     /  \     /  \
-#         H     I    J   K    L
