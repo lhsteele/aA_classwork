@@ -1,0 +1,19 @@
+
+<h1 style="font-family:courier;">Welcome to MusicApp!</h1>
+
+<h2 style="font-family:courier;">Sign up</h2>
+
+<form action=" <%= users_url %> " method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="email">Email</label>
+  <input type="text" name="user[email]" id="email">
+  <br>
+  <br>
+  <label for="password">Password</label>
+  <input type="password" name="user[password]" id="password">
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+
+</form>

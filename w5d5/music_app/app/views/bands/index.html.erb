@@ -1,0 +1,12 @@
+<h1>Band index</h1>
+
+<section class="band index">
+  <% @bands.each do |band| %>
+    <ul>
+      <li>
+        <a href="<%= edit_band_url(band) %>"><%= band.name %></a>
+      </li>
+    </ul>
+  <% end %>
+  
+</section>

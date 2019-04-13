@@ -1,0 +1,12 @@
+<h1><%= @album.title %></h1>
+<label for="album">
+  <ul>
+    <li><%= @album.year %></li>
+    <li><%= @album.studio == true ? "Studio" : "Live" %></li>
+    <li><%= @album.band.name %></li>
+  </ul>
+</label>
+
+<a href="<%= band_url(@album.band) %>" method="GET"><%= @album.band.name %></a>
+
+
