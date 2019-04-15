@@ -9,6 +9,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <% if logged_in? %>
+    <%= current_user.username %>
+  <% else %>
+
+  <% end  %>
+
   <body>
     <%= yield %>
   </body>
