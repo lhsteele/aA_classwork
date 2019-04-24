@@ -1,0 +1,22 @@
+/* PHASE 4: Footer */
+.main-content-footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: #fff;
+    width: 900px;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+
+.app-academy{
+    display: flex;
+    flex: 1;
+    
+}
+
+.footer-nav{
+    display: flex;
+    flex: 4;
+    justify-content: flex-end;
+}
