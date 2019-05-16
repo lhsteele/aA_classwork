@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlueBird</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <!-- current user is a helper method defined in ApplicationController -->
+    <!-- if currentUser exists, we want to assign an object of currentUser to the window -->
+    <!-- because this will be interpreted as JS, we need to wrap any strings in quotes -->
+    <!-- (like the username and email) -->
+    <% if current_user %>
+      <script>
+        window.currentUser= {
+          "id": <%= current_user.id %>,
+          "username": "<%= current_user.username %>",
+          "email": "<%= current_user.email %>"
+        };
+      </script>
+    <% end %>
+    
+    
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
